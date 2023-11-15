@@ -1,0 +1,72 @@
+.songContainer{
+    background-color: rgb(70, 66, 66);
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+.ContainerHeading{
+    background-color: rgb(70, 66, 66);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.more{
+    color: red;
+}
+.title{
+    color: white;
+}
+.squareContainer img{
+    height: 174px;
+    width: 174px;
+    border-radius: 20px;
+}
+
+.artistImage img{
+    height: 174px;
+    width: 174px;
+    border-radius: 50%;
+}
+
+.songTitle{
+    color: white;
+    text-align: center;
+}
+.songsContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    overflow: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+}
+.songsContainer::-webkit-scrollbar {
+    display: none;
+  }
+.songsContainer div h4{
+    overflow: auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+.squareContainer :hover{
+    opacity:0.2;
+}
+
+.squareContainer{
+    background: linear-gradient(
+        180deg,
+        rgb(171, 169, 169) 0%,
+        rgb(54, 52, 50) 80%,
+        rgb(18, 18, 18) 100%,
+    ) !important ;
+}
+.musicPlayer{
+    position: fixed;
+    bottom: 0px;
+    background-color: rgb(72, 61, 61);
+    width: 100%;
+    height: 80px;
+}

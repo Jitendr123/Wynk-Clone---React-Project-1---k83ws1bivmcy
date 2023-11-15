@@ -1,0 +1,39 @@
+.main{
+    --tw-bg-opacity: 1;
+    background-color: rgba(12,15,18,var(--tw-bg-opacity));
+    height: 100vh;
+    width: 100vw;
+    color: rgba(255,255,255);
+}
+.title{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    text-align: left;
+    padding: 20px;
+}
+.songContainer{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow: auto;
+    overflow-y: hidden;
+    /* IE and Edge */
+    /* -ms-overflow-style: hidden;  */
+    /* Firefox */
+    /* scrollbar-width: none;  */
+    /* transition: width 2s; */
+}
+
+.songContainer div :hover{
+    opacity:0.2;
+}
+
+.songContainer  img{
+    border-radius: 5%;
+    height: 274px;
+    width: 274px;
+}
+.songContainer::-webkit-scrollbar {
+    display: none;
+  }

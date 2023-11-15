@@ -1,0 +1,50 @@
+.banner{
+    height: 310px;
+    width: 100%;
+    /* background-color: pink; */
+    border-radius: 20px;
+    align-items: center;
+    
+}
+.banner img{
+    border-radius: 30px;
+    height: 100%;
+    width: 800px;
+
+}
+.prevBtn{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: rgb(105, 101, 101);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    opacity: 80%;
+    
+}
+.nextBtn{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: rgb(105, 101, 101);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 93%;
+    opacity: 80%;
+}
+.bannerContainer{
+    background-color: rgb(23, 22, 22);
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    gap: 8px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    transition: width 2s;
+}
+.bannerContainer::-webkit-scrollbar {
+    display: none;
+  }

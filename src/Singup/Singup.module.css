@@ -1,0 +1,98 @@
+.main{
+    position: absolute;
+    /* top: 10px; */
+    transform: translate(30%, 0%);
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    width: 60%;
+    border-radius: 20px;
+    /* border: 5px solid rgb(200, 28, 28); */
+    /* justify-content: center; */
+    margin: auto;
+    color: rgb(200, 197, 197);
+    background-color: rgba(33,37,45);
+    z-index: 1;
+    pointer-events: auto;
+}
+
+.loginImage{
+    height: 100%;
+    width: 40%; 
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+.rightDiv{
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 5px; */
+}
+.rightDiv h1{
+    margin: 0px;
+}
+.crossButton{
+    cursor: pointer;
+    margin-top: 1.5rem;
+    font-size: 30px;
+    text-align: right;
+}
+.input{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.input div{
+    height: 25px;
+    background-color: black;
+    padding: 12px;
+    margin: 10px;
+    margin-left: 0px;
+    /* text-align: center; */
+    justify-items: center;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+
+}
+.input input{
+    height: 25px;
+    background-color: black;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px;
+    border: none;
+    color: rgb(200, 197, 197);
+    font-size: 20px;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.rightDiv button{
+    height: 40px;
+    width: 140px;
+    border-radius: 25px;
+    font-size: 15px;
+    background-image: linear-gradient(180deg,#ff8d76 0,#ff0c55);
+    border: none;
+    color: rgb(200, 197, 197);
+    font-size: 20px;
+}
+.rightDiv h4{
+    padding: 0px;
+}
+.redirectingButton{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+}
+h4 span{
+    cursor: pointer;
+}
+.success{
+    color: green;
+}
+.fail{
+    color: red;
+}

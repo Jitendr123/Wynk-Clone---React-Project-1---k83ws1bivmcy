@@ -1,0 +1,238 @@
+.main{
+    background: rgb(12, 15, 18);
+    /* min-height: 100vh; */
+    width: 100%;
+    position: relative;
+}
+.top{
+    /* display: flex;
+    flex-direction: row; */
+    background: rgb(31, 39, 43);
+    height: 160px;
+    width: 100%;
+    padding-top: 70px;
+    color: white;
+    text-align: center;
+    clip-path: ellipse(100% 75% at 50% 15%);
+    position: relative;
+}
+
+.top img{
+    height: 35px;
+    width: 35px;
+}
+.top h1{
+    margin: 0px;
+}
+.header{
+    text-align: center;
+    padding: 0px 20px;
+}
+.header{
+    text-align: center;
+    padding: 0px 20px;
+}
+.title{
+    display: flex;
+    /* -webkit-box-pack: center; */
+    justify-content: center;
+}
+.title img{
+    margin-left: 8px;
+    height: 25px;
+    width: 29px;
+}
+.title p{
+    font-weight: bold;
+    color: rgb(235, 29, 34);
+    /* text-overflow: ellipsis; */
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
+    font-size: 24px;
+    margin: 0px;
+}
+.card{
+    background: rgb(21, 26, 31);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 16px;
+    border-radius: 12px;
+    padding: 20px 0px;
+    box-sizing: border-box;
+    margin-bottom: 26px;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+.header small{
+    color: rgb(190, 193, 194);
+    font-size: 14px;
+}
+.table{
+    padding: 0px 20px;
+}
+.access{
+    color: red;
+}
+.noAccess{
+    color: rgb(208, 201, 201);
+}
+table th{
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(129, 140, 148);
+    padding: 10px 0px;
+    font-size: 14px;
+}
+table thead :first-child{
+    width: 550px;
+}
+.table tr{
+    margin-bottom: 50px;
+}
+.table tr td{
+    line-height: 200%;
+    color: rgb(190, 193, 194);
+    font-size: 15px;
+}
+.plan{
+    display: flex;
+    /* -webkit-box-pack: center; */
+    justify-content: center;
+    flex-flow: wrap;
+    padding: 0px 7.5px;
+    /* -webkit-box-align: center; */
+    align-items: center;
+}
+.planCard{
+    margin-right: 24px;
+    border: 3px solid rgb(31, 39, 43);
+    color: rgb(190, 193, 194);
+    border-radius: 10px;
+    padding: 20px;
+}
+.originalPrice{
+    text-decoration: line-through;
+    margin: 2px;
+    color: rgb(157, 160, 163);
+    font-size: 14px;
+}
+.payablePrice{
+    margin: 2px;
+}
+.period{
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+.price{
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 18px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.discount{
+    font-size: 12px;
+}
+.selected{
+    border: 3px solid red;
+}
+.validityWrapper{
+    background: rgb(31, 39, 43);
+    padding: 16px;
+    color: rgb(190, 193, 194);
+    border-radius: 0px 0px 12px 12px;
+    font-size: 10px;
+    text-align: center;
+    position: relative;
+    bottom: -30px;
+    width: 96%;
+}
+.container{
+    width: 55%;
+    margin: auto;
+}
+.container > p{
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(129, 140, 148);
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.offerPrice{
+    font-size: 16px;
+    margin-left: 5px;
+}
+.goPremium{
+    display: flex;
+    flex-direction: row;
+    border: 3px solid rgb(235, 29, 34);
+    color: rgb(222, 222, 222);
+    background: rgb(21, 26, 31);
+    justify-content: space-between;
+    border-radius: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+}
+.offerPrice{
+    display: flex;
+    flex-direction: column;
+}
+.goPremium div > p {
+    margin-bottom: 5px;
+    font-family: math;
+}
+.termCond{
+    color: rgb(190, 193, 194);
+    font-size: 14px;
+}
+.termCond ul{
+    padding: 15px;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    background: rgb(31, 39, 43);
+    left: 22.5%;
+    width: 53%;
+}
+.amount{
+    text-align: left;
+    margin: 10px;
+}
+.amount >p{
+    margin: 0px;
+    font-weight: bold;
+    color: rgb(129, 140, 148);
+    font-size: 16px;
+}
+.amount > small{
+    color: rgb(190, 193, 194);
+    font-size: 14px;
+}
+.bottom > button{
+    background: rgb(2, 136, 209);
+    border-radius: 8px;
+    padding: 0px 45px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    margin: 4px;
+    height: 50px;
+}
+.middle{
+    margin-bottom: 0px;
+    padding-bottom: 104px;
+}

@@ -1,0 +1,84 @@
+.mainDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    background-color: rgb(71, 67, 67);
+    color: aliceblue;
+    padding: 30px;
+    /* border: 1px solid white; */
+
+}
+.songImage img{
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+.songDescription{
+    /* border: 1px solid white; */
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+.songTitle {
+    /* border: 1px solid white; */
+    margin-top: 0px;
+    padding: 0px;
+}
+.songDescription ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.playDownloadBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.playDownloadBtn button{
+    width: 150px;
+    height: 45px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.playBtn button{
+    background-image: linear-gradient(180deg,#ff8d76 0,#ff0c55);
+}
+.playIcon{
+    height: 35px;
+    /* width: 100px; */
+}
+.downloadBtn {
+    display: inline-flex;
+    gap: 10px;
+}
+.downloadBtn button{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+.songsTable{
+    width: 100%;
+}
+table tr th{
+    text-align: left;
+    padding-right: 50px;
+}
+table tr td{
+    text-align: left;
+    padding-right: 50px;
+}
+table tr{
+    margin-bottom: 50px;
+}
+.musicPlayer{
+    /* position: fixed;
+    bottom: 0px;
+    background-color: rgb(72, 61, 61);
+    width: 100%;
+    height: 80px; */
+}

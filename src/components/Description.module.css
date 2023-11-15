@@ -1,0 +1,8 @@
+.description{
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: rgb(70, 66, 66);
+    color: white;
+    padding: 30px;
+    margin: 30px;
+}

@@ -1,0 +1,100 @@
+*{
+    /* overflow-y: hidden; */
+  /* overflow-x: hidden; */
+  font-family: Roboto,sans-serif;
+}
+#header{
+    background-color: rgb(15, 14, 14);
+    height: 4.5rem;
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 19px;
+    margin: 0px;
+    padding: 0px;
+}
+#appName{
+    margin: auto;
+    padding: auto;
+    justify-content: space-between;
+    font-family: sans-serif;
+    /* color: white; */
+}
+#appIcon{
+    /* background-color: rgb(230, 147, 147); */
+    margin-left: 10px;
+    /* width: 50px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow-y: hidden;
+}
+#appIcon img{
+    margin-left: 10px;
+    width: 50px;
+    margin-bottom: 15px;
+}
+#userIcon{
+    height: 4.5rem;
+    width: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#menuIcon{
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 4.5rem;
+    width: 30px;
+    cursor: pointer;
+}
+#leftDiv{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(15, 14, 14);
+    font-family: sans-serif;
+    color: white;
+    cursor: pointer;
+}
+#rightDiv{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-right: 20px;
+    /* cursor: pointer; */
+}
+#userLogin{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: auto;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.searchContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-right: 20px;
+    border: 1px solid rgb(46, 43, 43);
+    border-radius: 20px;
+    height: 40px;
+    width: 300px;
+    background-color: rgb(57, 52, 52);
+  }
+  #searchBar{
+    border: none;
+    background-color: rgb(57, 52, 52);
+    font-size: 19px;
+    margin-left: 10px;
+    color: white;
+    
+}
+#searchIcon{
+    margin-top: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+input:focus {
+    outline: none;
+}

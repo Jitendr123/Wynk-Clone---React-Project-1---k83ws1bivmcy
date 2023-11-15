@@ -1,0 +1,41 @@
+.main{
+    background-color: rgb(66, 63, 63);
+    border-radius: 10px;
+    border: 1px solid rgb(209, 198, 198);
+    margin: 25px;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+}
+.leftDiv{
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    gap: 10px;
+    overflow-y: hidden;
+}
+.rightDiv{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: flex-end;
+}
+.rightDiv #appIcon img{
+    margin-right: 20px;
+    height: 45px;
+    width: 150px;
+}
+#appIcon{
+    overflow-y: hidden;
+}
+.leftDiv div{
+    overflow-y: hidden;
+}
+.leftDiv div h2{
+    margin-bottom: 0px;
+}
+.leftDiv div p{
+    margin-top: 0px;
+}

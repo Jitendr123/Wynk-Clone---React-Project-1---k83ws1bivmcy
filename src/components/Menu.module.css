@@ -1,0 +1,16 @@
+.main{
+    background-color: rgba(28,27,27);
+    color: white;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    height: fit-content;
+    width:220px ;
+    border-radius: 20px;
+    padding: 20px;
+    margin-right: 1.25rem;
+    margin-top: .50rem;
+}
+.main div{
+    cursor: pointer;
+}
