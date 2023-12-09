@@ -13,6 +13,7 @@ import Singup from "../Singup/Singup";
 import Menu from "../components/Menu";
 import Subscription from "../Subscription/Subscription";
 import Favorite from "../components/Favorite";
+import TrendingSong from "../TrendingSong/TrendingSong";
 function Home() {
   const location = useLocation();
   const currentUrl = location.pathname.split("/");
@@ -55,6 +56,10 @@ function Home() {
           <Route
             path="/music/favorite-song"
             element={<>{<Favorite />}</>}
+          ></Route>
+          <Route
+            path="/music/trending-songs"
+            element={<>{<TrendingSong />}</>}
           ></Route>
           <Route
             path="/music/subscription"

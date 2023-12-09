@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
-import style from "./SongDetails.module.css";
-import favStyle from "./Favorite.module.css";
+import style from "../components/SongDetails.module.css";
+import favStyle from "../components/Favorite.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDownload,
   faEllipsisVertical,
   faPlay,
 } from "@fortawesome/free-solid-svg-icons";
-import MusicPlayer from "./MusicPlayer";
-import LoginModal from "../Login/LoginModal";
-import { addFavorite, removeFavorite } from "../Utility/addRemoveFavorite";
+import MusicPlayer from "../components/MusicPlayer";
+import { addFavorite, getFavorite } from "../Utility/addRemoveFavorite";
 
-const favorateImage = require("../resources/favoriteImage.png");
+const trandingImage = require("../resources/trending.png");
 const redHeart = require("../resources/redHeart.png");
 const whiteHeart = require("../resources/whiteHeart.png");
 
@@ -20,21 +19,15 @@ function Favorite() {
   const [songList, setSongList] = useState();
   let [selectedSong, setSelectedSong] = useState();
 
-  // const {albumId,url}=props
-  //GET ID AND TYPE BY PARAM
-  //   const location = useLocation();
-  //   const currentUrl = location.pathname.split("/");
-  const token = localStorage.getItem("token");
-
-  const url = `https://academics.newtonschool.co/api/v1/music/favorites/like`;
+  const url = `https://academics.newtonschool.co/api/v1/music/song?filter={"featured":"Trending songs"}`;
   const artistUrl = `https://academics.newtonschool.co/api/v1/music/artist?_id=`;
 
-  async function getFavoriteSongs() {
+  async function getTrendingSongs() {
     const response = await fetch(url, {
-      headers: { projectId: "8nbih316dvO1", Authorization: `Bearer ${token}` },
+      headers: { projectId: "8nbih316dvO1" },
     });
     const data = await response.json();
-    console.log("Favorite songs ", data);
+    console.log("Trending songs ", data);
     if (data.status === "fail") {
       // return <LoginModal />;
     }
@@ -43,16 +36,14 @@ function Favorite() {
   }
 
   async function getRequiredData(data) {
-    const requireDta = data?.songs?.map(async (item) => {
-      const { _id, title, thumbnail, audio_url, artist: artistIdList } = item;
-      let artistNameList = [];
+    const requireDta = data?.map(async (item) => {
+      const { _id, title, thumbnail, audio_url, artist: artistList } = item;
       let artistsNameString;
-      artistNameList = artistIdList?.map((artistId) => {
-        return getArtistName(artistId);
+      let artistNameList = artistList?.map((artist) => {
+        return artist.name;
       });
-      await Promise.all(artistNameList).then(
-        (data) => (artistsNameString = data.join(","))
-      );
+      console.log(artistNameList);
+      artistsNameString = artistNameList.join(",");
       let time;
       const timeDurationOfAudio = getTimeDurationOfAudio(audio_url);
       await timeDurationOfAudio.then((data) => {
@@ -85,22 +76,11 @@ function Favorite() {
         res(audio.duration);
       });
     });
-    //  console.log( duration,' time')
     return duration;
-  }
-
-  async function getArtistName(id) {
-    const url = artistUrl + id;
-    const response = await fetch(url, {
-      headers: { projectId: "8nbih316dvO1" },
-    });
-    const data = await response.json();
-    return data?.data[0]?.name;
   }
 
   //function for downaloading song  by clicking on downloading buttton
   const downloadSong = (song) => {
-    // audioRef.current.download()
     const downloadLink = document.createElement("a");
     downloadLink.href = song.audio_url; // Replace with your audio URL
     console.log(downloadLink);
@@ -113,32 +93,20 @@ function Favorite() {
     console.log(song, "selectedsong");
   }
 
-  async function favoriteHandler(id) {
-    const response = await addFavorite(id);
-    console.log("response", response);
-  }
-
   useEffect(() => {
-    if (token === undefined) {
-      console.log("open login modal");
-      return <LoginModal />;
-    } else {
-      getFavoriteSongs();
-    }
+    getTrendingSongs();
   }, []);
 
   return (
     <>
       <div className={style.mainDiv}>
         <div className={style.songImage}>
-          {/* {details?.image && <img src={details?.image} alt={details?.title} />} */}
-
-          <img src={favorateImage} alt={details?.title} />
+          <img src={trandingImage} alt={details?.title} />
         </div>
         <div className={style.songDescription}>
-          <h2 className={style.songTitle}>{details?.title}</h2>
+          <h2 className={style.songTitle}>Trending Songs</h2>
           <ul>
-            <li>{details?.songs?.length} songs</li>
+            <li>{details?.length} songs</li>
           </ul>
           <div className={style.playDownloadBtn}>
             <div className={style.playBtn}>
@@ -185,13 +153,6 @@ function Favorite() {
                     <td>{details?.title}</td>
                     <td>0:{Math.floor(Number(selectedSong?.time))}</td>
                     <td>
-                      <img
-                        className={style.downloadBtn}
-                        src={redHeart}
-                        alt=""
-                      />
-                    </td>
-                    <td>
                       <button>
                         <FontAwesomeIcon
                           className={style.downloadBtn}
@@ -225,14 +186,6 @@ function Favorite() {
                     </td>
                     <td onClick={() => changeSong(song)}>{song.title}</td>
                     <td>0:{Math.round(Number(song.time))}</td>
-                    <td>
-                      <img
-                        className={favStyle.likebtn}
-                        onClick={() => favoriteHandler(song._id)}
-                        src={redHeart}
-                        alt=""
-                      />
-                    </td>
                     <td>
                       <button>
                         <FontAwesomeIcon

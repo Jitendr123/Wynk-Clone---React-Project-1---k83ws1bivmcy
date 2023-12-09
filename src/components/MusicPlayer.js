@@ -19,9 +19,10 @@ function MusicPlayer(props) {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   let [selectedSong, setSelectedSong] = useState();
-  const { songList } = props;
+  const { songList, selectSong } = props;
   const audioRef = useRef(null);
-  // console.log(songList[0], " song list");
+  console.log(selectSong, "fav song list");
+
   if (selectedSong === undefined && songList !== undefined) {
     if (songList[0] === undefined) {
       setSelectedSong(songList);
@@ -95,6 +96,9 @@ function MusicPlayer(props) {
       setIsPlaying(false);
     }
   };
+  useEffect(() => {
+    setSelectedSong(selectSong);
+  }, [selectSong]);
 
   return (
     <>

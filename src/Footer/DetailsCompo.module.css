@@ -1,15 +1,28 @@
 .s{
-    height:274px;
-    width:275px;
-    border:2px solid rgb(83, 76, 76);
-    background-color: rgb(83, 76,76);
+    height:auto;
+    width:350px;
+    /* border:2px solid rgb(83, 76, 76); */
+    background-color: rgb(70, 66, 66);
     color: white;
     overflow-y: hidden;
     padding: 10px;
     margin: 10px;
 }
+.s h4{
+    margin-top: 0px;
+}
+.s p{
+    color: rgb(129,140,148);
+}
+.main{
+    background-color: rgb(70, 66, 66);
+}
 .div1{
+    background-color: rgb(70, 66, 66);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: left;
+    padding-left: 41px;
+    padding-right: 45px;
 }

@@ -1,5 +1,10 @@
+
+.maintainMargin{
+    background-color: rgb(70, 66, 66);
+    padding: 30px;
+}
 .main{
-    background-color: rgb(66, 63, 63);
+    background-color: rgb(70, 66, 66);
     border-radius: 10px;
     border: 1px solid rgb(209, 198, 198);
     margin: 25px;
@@ -8,6 +13,11 @@
     flex-direction: row;
     justify-content: space-between;
     height: 100px;
+}
+.mainDiv{
+    background-color: rgb(70, 66, 66);
+    margin-top: -30px;
+    padding: 0px;
 }
 .leftDiv{
     display: flex;

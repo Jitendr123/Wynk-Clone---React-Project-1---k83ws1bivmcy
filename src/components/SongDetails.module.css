@@ -1,11 +1,15 @@
 .mainDiv{
+    position: relative;
     display: flex;
     flex-direction: row;
     gap: 100px;
+    padding: 30px;
     background-color: rgb(71, 67, 67);
     color: aliceblue;
-    padding: 30px;
-    /* border: 1px solid white; */
+    /* min-height: 100vh; */
+    max-height: 100%;
+    padding-bottom: 90px;
+    z-index: 0;
 
 }
 .songImage img{
@@ -22,11 +26,13 @@
 .songTitle {
     /* border: 1px solid white; */
     margin-top: 0px;
+    margin-bottom: 10px;
     padding: 0px;
 }
 .songDescription ul{
     margin: 0px;
-    padding: 0px;
+    padding-left: 0px;
+    padding-bottom: 10px;
     list-style: none;
 }
 .playDownloadBtn{
@@ -55,6 +61,8 @@
 .downloadBtn {
     display: inline-flex;
     gap: 10px;
+    height: 20px;
+    width: 20px;
 }
 .downloadBtn button{
     height: 45px;
@@ -70,10 +78,11 @@ table tr th{
 }
 table tr td{
     text-align: left;
-    padding-right: 50px;
+    padding-right: 30px;
 }
 table tr{
     margin-bottom: 50px;
+    cursor: pointer;
 }
 .musicPlayer{
     /* position: fixed;
