@@ -1,0 +1,29 @@
+.main{
+    background-color: rgb(30, 27, 27);
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+.main h1{
+    padding-top: 20px;
+    font-size: 35px;
+    color: white;
+}
+.main p{
+    color: rgb(129,140,148);
+    font-size: 17px;
+}
+.main h3{
+    color: white;
+}
+.main ul{
+    list-style: none;
+    padding-left: 0px;
+    font-size: 20px;
+    color: #dbc7c7;
+}
+.main ul li{
+    padding-bottom: 22px;
+    cursor: pointer;
+}

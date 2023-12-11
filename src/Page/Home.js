@@ -14,6 +14,8 @@ import Menu from "../components/Menu";
 import Subscription from "../Subscription/Subscription";
 import Favorite from "../components/Favorite";
 import TrendingSong from "../TrendingSong/TrendingSong";
+import LinkComponent from "../Footer/LinkComponent";
+import PrivacyPolicyComponent from "../components/PrivacyPolicyComponent";
 function Home() {
   const location = useLocation();
   const currentUrl = location.pathname.split("/");
@@ -37,6 +39,7 @@ function Home() {
                 <Description />
                 <ToRedirectMobileApp />
                 <Details />
+                <LinkComponent />
               </>
             }
           ></Route>
@@ -64,6 +67,17 @@ function Home() {
           <Route
             path="/music/subscription"
             element={<>{<Subscription />}</>}
+          ></Route>
+          <Route
+            path="/music/privacy-policy"
+            element={
+              <>
+                <PrivacyPolicyComponent />
+                <ToRedirectMobileApp />
+                <Details />
+                <LinkComponent />
+              </>
+            }
           ></Route>
         </Routes>
 

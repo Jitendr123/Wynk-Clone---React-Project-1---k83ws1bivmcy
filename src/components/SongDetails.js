@@ -269,7 +269,7 @@ function SongDetails(props) {
         </div>
       </div>
       <div className={style.musicPlayer}>
-        <MusicPlayer songList={songList} />
+        <MusicPlayer songList={songList} selectSong={selectedSong} />
       </div>
     </>
   );
